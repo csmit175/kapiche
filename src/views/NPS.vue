@@ -7,15 +7,19 @@
     <div class="scores">
       <div class="score npsno">
         {{nps}}
+        <span>NPS</span>
       </div>
       <div class="score promoter">
         {{promoters}}
+        <span>Promoters</span>
       </div>
       <div class="score passive">
         {{passives}}
+        <span>Passives</span>
       </div>
-      <div class="score detractors">
+      <div class="score detractor">
         {{detractors}}
+        <span>Detractors</span>
       </div>
     </div>
     
@@ -95,21 +99,34 @@ export default {
       background-color: #e5e5e5;
     }
     .scores {
+      width: 80%;
       display: flex;
       flex-direction: row;
       align-content: center;
+      margin: auto;
+      margin-top: 27px;
       .score {
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        font-size: 26px;
+        font-weight: bold;
+        span {
+          font-size: 16px;
+          font-weight: normal;
+        }
         &.npsno {
-
+          color: #068ccc;
         }
         &.promoter {
-          
+          color: #21ba45;
         }
         &.passive {
-          
+          color: #7f7f7f;
         }
         &.detractor {
-          
+          color: #ee3824;
         }
       }
     }
